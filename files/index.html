@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Ember & Oak | Wood-Fired Kitchen & Bar</title>
+  <meta name="description"
+    content="Ember & Oak is a rustic wood-fired kitchen serving bold, flame-kissed dishes crafted from locally sourced ingredients. Reserve your table today." />
+  <meta name="keywords" content="wood-fired restaurant, rustic dining, Ember Oak, craft cocktails, locally sourced" />
+  <meta name="author" content="Ember & Oak Restaurant" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Ember & Oak | Wood-Fired Kitchen & Bar" />
+  <meta property="og:description" content="Bold flavors born from fire. Reserve your table at Ember & Oak." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emberandoak.com" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-icon">🔥</span>
+        <span class="brand-name">Ember <span>&</span> Oak</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-last">
+        <!-- Dark Mode Toggle -->
+        <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="themeIcon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-reserve d-none d-lg-inline-flex">Reserve a Table</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="container hero-content text-center">
+      <div class="hero-logo mb-3" aria-label="Ember and Oak Logo">
+        <span class="logo-flame">🔥</span>
+      </div>
+      <p class="hero-eyebrow">Wood-Fired Kitchen & Bar</p>
+      <h1 class="hero-title">Where Fire Meets<br><em>Flavour</em></h1>
+      <p class="hero-tagline">Hand-crafted dishes kissed by flame, poured with passion.<br>
+        Sourced local. Served bold. Remembered always.</p>
+
+      <!-- Today's Special Badge -->
+      <div id="todaySpecialBadge" class="today-special-badge mb-4 d-none" role="note" aria-live="polite">
+        <span class="badge-flame">🔥</span>
+        <span id="specialText">Tonight's Special: Ask your server!</span>
+      </div>
+
+      <div class="hero-ctas d-flex flex-wrap justify-content-center gap-3">
+        <a href="#contact" class="btn btn-primary-fire btn-lg">Reserve a Table</a>
+        <a href="#menu" class="btn btn-outline-fire btn-lg">View Menu</a>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <i class="bi bi-chevron-double-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="about-image-wrap">
+            <div class="about-img-main" role="img" aria-label="Wood-fired oven at Ember and Oak restaurant"></div>
+            <div class="about-img-accent" role="img" aria-label="Chef preparing food"></div>
+            <div class="about-years-badge">
+              <span class="years-number">12</span>
+              <span class="years-text">Years of<br>Fire & Craft</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">Born from the<br><em>Ancient Art of Fire</em></h2>
+          <p class="lead-text">Ember & Oak began as a small roadside grill in 2012, when founder Marco Renaldi dragged a
+            century-old cast iron oven from his grandfather's farm in Tuscany and planted it in the heart of the city.
+          </p>
+          <p>What started as weekend pop-ups grew into something bigger — a gathering place where the ritual of cooking
+            over real wood and open flame became the beating heart of every meal. Every log we burn is hand-selected
+            white oak from local sustainable farms. Every ember tells a story.</p>
+          <p>Today, our kitchen is led by Head Chef Aria Chen, whose philosophy is simple: <strong>great fire, great
+              ingredients, great people.</strong> We do not rush. We do not compromise. We cook the way fire demands —
+            slowly, honestly, beautifully.</p>
+          <div class="about-stats row g-3 mt-2">
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">50+</span>
+                <span class="stat-label">Local Farms</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">8</span>
+                <span class="stat-label">Awards Won</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-card">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Wood-Fired</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MENU HIGHLIGHTS ===================== -->
+  <section id="menu" class="section-padding menu-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-label">Our Signatures</div>
+        <h2 class="section-title">Menu <em>Highlights</em></h2>
+        <p class="section-subtitle">Each dish begins with the question: what can fire reveal in this ingredient?</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Dish 1 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Fire-Roasted Bone Marrow dish"
+              style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);">
+              <div class="menu-emoji" aria-hidden="true">🦴</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Fire-Roasted Bone Marrow</h3>
+                <span class="dish-price">$18</span>
+              </div>
+              <p class="dish-desc">Split marrow roasted directly on embers, served with sourdough crostini, pickled
+                shallots & gremolata.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Starter</span>
+                <span class="dish-tag">Chef's Pick</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Oak-Smoked Duck Breast dish"
+              style="background: linear-gradient(135deg, #704214 0%, #C17817 50%, #E8A020 100%);">
+              <div class="menu-emoji" aria-hidden="true">🦆</div>
+              <div class="menu-badge">Popular</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Oak-Smoked Duck Breast</h3>
+                <span class="dish-price">$38</span>
+              </div>
+              <p class="dish-desc">48-hour brined Pekin duck, slow-smoked over white oak, glazed with wildflower honey &
+                five-spice.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Main</span>
+                <span class="dish-tag">Signature</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Ember-Charred Cauliflower dish"
+              style="background: linear-gradient(135deg, #556B2F 0%, #8FBC8F 50%, #98FB98 100%);">
+              <div class="menu-emoji" aria-hidden="true">🥦</div>
+              <div class="menu-badge badge-veg">Vegan</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Ember-Charred Cauliflower</h3>
+                <span class="dish-price">$24</span>
+              </div>
+              <p class="dish-desc">Whole-roasted cauliflower blackened on coals, draped in harissa tahini, pomegranate &
+                fresh herbs.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Main</span>
+                <span class="dish-tag">Vegan</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Wood-Fired Wagyu Ribeye dish"
+              style="background: linear-gradient(135deg, #8B0000 0%, #C0392B 50%, #E74C3C 100%);">
+              <div class="menu-emoji" aria-hidden="true">🥩</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Wood-Fired Wagyu Ribeye</h3>
+                <span class="dish-price">$68</span>
+              </div>
+              <p class="dish-desc">Grade A5 Wagyu, seared over live coals, finished with aged butter, bone marrow jus &
+                truffle salt.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Main</span>
+                <span class="dish-tag">Premium</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 5 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Flame-Kissed Oysters dish"
+              style="background: linear-gradient(135deg, #2C3E50 0%, #3498DB 50%, #85C1E9 100%);">
+              <div class="menu-emoji" aria-hidden="true">🦪</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Flame-Kissed Oysters</h3>
+                <span class="dish-price">$22</span>
+              </div>
+              <p class="dish-desc">Half-dozen Pacific oysters, gently warmed over embers with chorizo crumb, mignonette
+                & lemon.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Starter</span>
+                <span class="dish-tag">Seasonal</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 6 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Scorched Chocolate Lava Tart dessert"
+              style="background: linear-gradient(135deg, #1a0a00 0%, #4a1a00 50%, #8B4513 100%);">
+              <div class="menu-emoji" aria-hidden="true">🍫</div>
+              <div class="menu-badge badge-dessert">Dessert</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Scorched Chocolate Tart</h3>
+                <span class="dish-price">$16</span>
+              </div>
+              <p class="dish-desc">Dark chocolate ganache tart with a torched caramel crust, smoked sea salt & vanilla
+                bean crème fraîche.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Dessert</span>
+                <span class="dish-tag">Must-Try</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 7 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Hearth-Baked Sourdough"
+              style="background: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #F0E68C 100%);">
+              <div class="menu-emoji" aria-hidden="true">🍞</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Hearth-Baked Sourdough</h3>
+                <span class="dish-price">$12</span>
+              </div>
+              <p class="dish-desc">72-hour fermented sourdough baked in our wood-fire hearth, served with whipped
+                cultured butter & sea salt.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Bread</span>
+                <span class="dish-tag">Vegan Option</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dish 8 -->
+        <div class="col-md-6 col-lg-4">
+          <article class="menu-card">
+            <div class="menu-card-img" role="img" aria-label="Ash-Roasted Beet Salad"
+              style="background: linear-gradient(135deg, #6D2177 0%, #C0392B 50%, #E91E63 100%);">
+              <div class="menu-emoji" aria-hidden="true">🥗</div>
+              <div class="menu-badge badge-veg">Vegan</div>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="dish-name">Ash-Roasted Beet Salad</h3>
+                <span class="dish-price">$19</span>
+              </div>
+              <p class="dish-desc">Rainbow beets buried in hot ash until caramelized, with whipped goat cheese, candied
+                walnuts & micro herbs.</p>
+              <div class="dish-tags">
+                <span class="dish-tag">Starter</span>
+                <span class="dish-tag">Gluten-Free</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <p class="menu-note">Menu changes seasonally based on what our local farms are growing. Ask about today's
+          specials.</p>
+        <a href="#contact" class="btn btn-primary-fire btn-lg">Book Your Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section id="gallery" class="section-padding gallery-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-label">Our World</div>
+        <h2 class="section-title">A Glimpse into the <em>Kitchen</em></h2>
+        <p class="section-subtitle">The fire never stops. Neither does the craft.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Each gallery item triggers a modal -->
+        <div class="gallery-item gallery-item--large" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="1"
+          data-caption="The heart of our kitchen — a century-old wood-fired oven" role="button" tabindex="0"
+          aria-label="View photo: Wood-fired oven">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #1a0800 0%, #8B3A00 60%, #FF8C00 100%);"
+            role="img" aria-label="Wood-fired oven burning bright">
+            <div class="gallery-emoji" aria-hidden="true">🔥</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="2"
+          data-caption="Chef Aria hand-finishing the Wagyu Ribeye" role="button" tabindex="0"
+          aria-label="View photo: Chef at work">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #2C1810 0%, #8B4513 100%);" role="img"
+            aria-label="Chef hand-finishing a dish">
+            <div class="gallery-emoji" aria-hidden="true">👨‍🍳</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="3"
+          data-caption="Our warm, rustic dining room with Edison lighting" role="button" tabindex="0"
+          aria-label="View photo: Dining room">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #1C1008 0%, #5C3317 60%, #C9A96E 100%);"
+            role="img" aria-label="Rustic dining room with warm lighting">
+            <div class="gallery-emoji" aria-hidden="true">🕯️</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="4"
+          data-caption="Our signature Oak-Smoked Duck Breast plating" role="button" tabindex="0"
+          aria-label="View photo: Duck breast plating">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #704214 0%, #E8A020 100%);" role="img"
+            aria-label="Oak-smoked duck breast beautifully plated">
+            <div class="gallery-emoji" aria-hidden="true">🍽️</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="gallery-item gallery-item--tall" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="5"
+          data-caption="Hand-selected white oak logs sourced from local sustainable farms" role="button" tabindex="0"
+          aria-label="View photo: White oak logs">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #3D2B1F 0%, #7B4F2E 60%, #A0785A 100%);"
+            role="img" aria-label="Stack of white oak logs">
+            <div class="gallery-emoji" aria-hidden="true">🪵</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="6"
+          data-caption="Craft cocktails made with house-smoked spirits" role="button" tabindex="0"
+          aria-label="View photo: Craft cocktails">
+          <div class="gallery-img" style="background: linear-gradient(135deg, #0D2137 0%, #1A6B8A 60%, #5BB8D4 100%);"
+            role="img" aria-label="Craft cocktails with smoke effect">
+            <div class="gallery-emoji" aria-hidden="true">🍹</div>
+          </div>
+          <div class="gallery-overlay"><i class="bi bi-zoom-in" aria-hidden="true"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Modal (Lightbox) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-label="Gallery lightbox" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content gallery-modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close gallery"></button>
+        </div>
+        <div class="modal-body text-center p-0">
+          <div id="modalImageDisplay" class="modal-image-display" aria-live="polite">
+            <div id="modalEmoji" class="modal-emoji" aria-hidden="true"></div>
+          </div>
+          <p class="modal-caption" id="modalCaption"></p>
+        </div>
+        <div class="modal-footer border-0 justify-content-between">
+          <button class="btn btn-sm btn-outline-secondary" id="prevImg" aria-label="Previous image">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i> Previous
+          </button>
+          <span class="gallery-counter" id="galleryCounter" aria-live="polite"></span>
+          <button class="btn btn-sm btn-outline-secondary" id="nextImg" aria-label="Next image">
+            Next <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section id="testimonials" class="section-padding testimonials-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-label">Guest Reviews</div>
+        <h2 class="section-title">What Guests <em>Say</em></h2>
+      </div>
+
+      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Customer testimonials">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="testimonial-card mx-auto">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">The bone marrow is absolutely transcendent. I've eaten at Michelin-starred
+                restaurants across Europe and this dish stopped me in my tracks. The fire does something to the
+                ingredients that no oven can replicate.</p>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">JM</div>
+                <div>
+                  <strong>James Morrison</strong>
+                  <span>Food Critic, The Daily Plate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">We celebrated our anniversary here and it was pure magic. The ambiance, the
+                service, the food — everything was perfectly orchestrated. The smoked duck breast made me forget every
+                other duck dish I've ever had.</p>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">SC</div>
+                <div>
+                  <strong>Sofia Chen</strong>
+                  <span>Regular Guest</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">As a vegan, I often feel like an afterthought at upscale restaurants. Not
+                here. The ember-charred cauliflower and beet salad are genuinely creative, satisfying dishes — not
+                compromises. Absolutely coming back.</p>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">LP</div>
+                <div>
+                  <strong>Lena Park</strong>
+                  <span>Verified Guest Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">The Wagyu ribeye is everything. Chef Aria knows how to handle fire — the crust
+                on that steak was perfect, and the bone marrow jus brought tears to my eyes. Worth every single penny.
+                This is what dining is about.</p>
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">RO</div>
+                <div>
+                  <strong>Rafael Ortega</strong>
+                  <span>Food Enthusiast, @fireandplate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="testimonial-card mx-auto">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">I've brought clients here three times now and it never fails to impress. The
+                team treated us like family. The sourdough alone is reason enough to visit — and then the scorched
+                chocolate tart for dessert. Perfect evening every time.</p>
+              <div class="testimonial-stars" aria-label="4 out of 5 stars">
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star" aria-hidden="true"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">TN</div>
+                <div>
+                  <strong>Tasha Nguyen</strong>
+                  <span>Business Dining, Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-indicators testimonial-indicators">
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Review 1"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
+            aria-label="Review 2"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"
+            aria-label="Review 3"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"
+            aria-label="Review 4"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="4"
+            aria-label="Review 5"></button>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev"
+          aria-label="Previous review">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next"
+          aria-label="Next review">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT & LOCATION ===================== -->
+  <section id="contact" class="section-padding contact-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-label">Find Us</div>
+        <h2 class="section-title">Reserve Your <em>Table</em></h2>
+        <p class="section-subtitle">We'd love to have you. Book directly or drop us a line.</p>
+      </div>
+
+      <div class="row g-5">
+        <!-- Contact Info + Map -->
+        <div class="col-lg-5">
+          <div class="contact-info-card">
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></div>
+              <div>
+                <strong>Address</strong>
+                <address>42 Coalfire Lane, Meatpacking District<br>New York, NY 10014</address>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+12125550182">(212) 555-0182</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@emberandoak.com">hello@emberandoak.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon"><i class="bi bi-clock-fill" aria-hidden="true"></i></div>
+              <div>
+                <strong>Hours</strong>
+                <span>Tue–Thu: 5:30 PM – 10:00 PM</span>
+                <span>Fri–Sat: 5:00 PM – 11:30 PM</span>
+                <span>Sunday: 4:00 PM – 9:00 PM</span>
+                <span>Monday: Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Static Google Map iframe -->
+          <div class="map-container mt-4" role="region" aria-label="Restaurant location map">
+            <iframe title="Ember and Oak location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.6686398285!2d-74.00601468459418!3d40.74062794338076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf6a5c7f5f%3A0x4a01c80674af1d8!2sMeatpacking+District%2C+New+York%2C+NY!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="col-lg-7">
+          <form id="bookingForm" class="booking-form" novalidate aria-label="Table reservation form">
+            <h3 class="form-title">Reserve a Table</h3>
+
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Marco" required
+                  minlength="2" maxlength="50" aria-required="true" />
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Renaldi" required
+                  minlength="2" maxlength="50" aria-required="true" />
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required
+                  aria-required="true" />
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="phone" class="form-label">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(212) 555-0000" required
+                  minlength="7" maxlength="15" aria-required="true" />
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="date" class="form-label">Date <span aria-hidden="true">*</span></label>
+                <input type="date" class="form-control" id="date" name="date" required aria-required="true" />
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="time" class="form-label">Preferred Time <span aria-hidden="true">*</span></label>
+                <select class="form-select" id="time" name="time" required aria-required="true">
+                  <option value="" selected disabled>Select a time</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="19:30">7:30 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                  <option value="20:30">8:30 PM</option>
+                  <option value="21:00">9:00 PM</option>
+                </select>
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="guests" class="form-label">Number of Guests <span aria-hidden="true">*</span></label>
+                <select class="form-select" id="guests" name="guests" required aria-required="true">
+                  <option value="" selected disabled>Select guests</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7+">7+ Guests (call us)</option>
+                </select>
+                <div class="invalid-feedback" role="alert"></div>
+              </div>
+              <div class="col-sm-6">
+                <label for="occasion" class="form-label">Occasion <span class="optional-label">(Optional)</span></label>
+                <select class="form-select" id="occasion" name="occasion">
+                  <option value="" selected>None</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="business">Business Dinner</option>
+                  <option value="date">Date Night</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="notes" class="form-label">Special Requests <span
+                    class="optional-label">(Optional)</span></label>
+                <textarea class="form-control" id="notes" name="notes" rows="3"
+                  placeholder="Dietary requirements, allergies, seating preferences..." maxlength="300"></textarea>
+                <div class="form-text char-counter"><span id="charCount">0</span>/300 characters</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required
+                    aria-required="true" />
+                  <label class="form-check-label" for="agreeTerms">
+                    I agree to the <a href="#" aria-label="Cancellation policy">cancellation policy</a> (24-hour notice
+                    required) <span aria-hidden="true">*</span>
+                  </label>
+                  <div class="invalid-feedback" role="alert"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary-fire btn-lg w-100" id="submitBtn">
+                  <span class="btn-text">Confirm Reservation</span>
+                  <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="formSuccess" class="form-success d-none" role="alert" aria-live="assertive">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+              <div>
+                <strong>Reservation Confirmed!</strong>
+                <span>We'll send a confirmation to your email shortly. We can't wait to see you!</span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4 footer-main">
+        <!-- Brand -->
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon">🔥</span>
+            <span class="brand-name">Ember <span>&</span> Oak</span>
+          </div>
+          <p class="footer-tagline">Wood-Fired Kitchen & Bar. Cooking with fire since 2012.</p>
+          <div class="social-links" role="navigation" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Follow us on Instagram" rel="noopener">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on Facebook" rel="noopener">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Follow us on TikTok" rel="noopener">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="View us on Yelp" rel="noopener">
+              <i class="bi bi-yelp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="col-sm-6 col-lg-4">
+          <h4 class="footer-heading">Opening Hours</h4>
+          <dl class="hours-list">
+            <div class="hours-row">
+              <dt>Tuesday – Thursday</dt>
+              <dd>5:30 PM – 10:00 PM</dd>
+            </div>
+            <div class="hours-row">
+              <dt>Friday – Saturday</dt>
+              <dd>5:00 PM – 11:30 PM</dd>
+            </div>
+            <div class="hours-row">
+              <dt>Sunday</dt>
+              <dd>4:00 PM – 9:00 PM</dd>
+            </div>
+            <div class="hours-row closed">
+              <dt>Monday</dt>
+              <dd>Closed</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm-6 col-lg-4">
+          <h4 class="footer-heading">Quick Links</h4>
+          <nav aria-label="Footer navigation">
+            <ul class="footer-links">
+              <li><a href="#about">Our Story</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#contact">Reservations</a></li>
+              <li><a href="#">Private Dining</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> Ember & Oak Restaurant. All rights reserved.</p>
+        <p class="footer-legal">
+          <a href="#">Privacy Policy</a> · <a href="#">Terms of Use</a> · <a href="#">Accessibility</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
