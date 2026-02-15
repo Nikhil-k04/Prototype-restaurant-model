@@ -1,9 +1,4 @@
-/* ============================================================
-   Ember & Oak — Custom CSS
-   Wood-Fired Kitchen & Bar Landing Page
-   ============================================================ */
-
-/* ── CSS Variables (Light Theme) ────────────────────────── */
+/* CSS Variables - Light Theme */
 :root {
   --fire-100: #FFF3E0;
   --fire-200: #FFE0B2;
@@ -42,7 +37,7 @@
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ── Dark Theme ──────────────────────────────────────────── */
+/* Dark Theme overrides */
 [data-theme="dark"] {
   --bg-primary: #120600;
   --bg-secondary: #1C0A00;
@@ -63,7 +58,7 @@
   --oak-100: #1E0D05;
 }
 
-/* ── Base Reset & Typography ─────────────────────────────── */
+/* Base Reset & Typography */
 *,
 *::before,
 *::after {
@@ -113,14 +108,14 @@ img {
   padding: 100px 0;
 }
 
-/* ── Focus States (Accessibility) ───────────────────────── */
+/* Focus States */
 :focus-visible {
   outline: 3px solid var(--fire-500);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* ── Section Labels & Titles ─────────────────────────────── */
+/* Section Labels & Titles */
 .section-label {
   font-family: 'Lato', sans-serif;
   font-size: 0.8rem;
@@ -150,7 +145,7 @@ img {
   margin: 0 auto;
 }
 
-/* ── Buttons ─────────────────────────────────────────────── */
+/* Buttons */
 .btn-primary-fire {
   background: linear-gradient(135deg, var(--fire-600), var(--fire-500));
   color: #fff;
@@ -237,7 +232,7 @@ img {
   transform: rotate(15deg);
 }
 
-/* ── Navbar ──────────────────────────────────────────────── */
+/* Navbar */
 #mainNav {
   background-color: transparent;
   transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
@@ -344,7 +339,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('c:\Users\DELL\Downloads\Gemini_Generated_Image_z1a2ekz1a2ekz1a2.png');
+  background-image: url('images/hero-bg.png');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -605,7 +600,7 @@ img {
   }
 }
 
-/* ── About Section ───────────────────────────────────────── */
+/* About Section */
 .about-image-wrap {
   position: relative;
   height: 480px;
@@ -732,7 +727,7 @@ img {
   margin-top: 4px;
 }
 
-/* ── Menu Section ────────────────────────────────────────── */
+/* Menu Section */
 .menu-section {
   background: var(--bg-secondary);
 }
@@ -852,7 +847,7 @@ img {
   margin-bottom: 20px;
 }
 
-/* ── Gallery Section ─────────────────────────────────────── */
+/* Gallery Section */
 .gallery-section {
   background: var(--bg-primary);
 }
@@ -975,7 +970,7 @@ img {
   font-weight: 600;
 }
 
-/* ── Testimonials ────────────────────────────────────────── */
+/* Testimonials */
 .testimonials-section {
   background: var(--bg-secondary);
 }
@@ -1083,7 +1078,7 @@ img {
   }
 }
 
-/* ── Contact Section ─────────────────────────────────────── */
+/* Contact Section */
 .contact-section {
   background: var(--bg-primary);
 }
@@ -1270,7 +1265,7 @@ img {
   }
 }
 
-/* ── Footer ──────────────────────────────────────────────── */
+/* Footer */
 .site-footer {
   background: var(--bg-dark);
   color: rgba(255, 255, 255, 0.75);
@@ -1407,7 +1402,7 @@ img {
   opacity: 1;
 }
 
-/* ── Scroll-triggered Fade-in ────────────────────────────── */
+/* ScrollFade Animation */
 .fade-in-up {
   opacity: 0;
   transform: translateY(30px);
@@ -1419,7 +1414,7 @@ img {
   transform: translateY(0);
 }
 
-/* ── Utility ─────────────────────────────────────────────── */
+/* Utilities & Responsive */
 @media (max-width: 991px) {
   .about-image-wrap {
     height: 360px;
